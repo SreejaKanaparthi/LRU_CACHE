@@ -1,69 +1,69 @@
 # LRU_CACHE
-## What is Caching?
+## What is Caching?</br>
 Caching is a technique used to store frequently accessed data temporarily so that it can be quickly retrieved without having to recompute or fetch it from the original source every time. It helps in improving performance by reducing access time and computational overhead.
 
-**Need for Caching:**
-->Reduces the time needed to access frequently used data.
--> Helps in lowering the number of database queries or API calls.
--> Saves CPU and network bandwidth by avoiding redundant operations.
--> Improves application responsiveness by delivering content faster.
-->Helps handle high traffic by reducing pressure on servers.
+**Need for Caching:** </br>
+->Reduces the time needed to access frequently used data.</br>
+-> Helps in lowering the number of database queries or API calls.</br>
+-> Saves CPU and network bandwidth by avoiding redundant operations.</br>
+-> Improves application responsiveness by delivering content faster.</br>
+->Helps handle high traffic by reducing pressure on servers.</br>
 
-## Memory Caching:
-**Redis**
-->Redis is an open-source, in-memory data structure store, used as a database, cache, and message broker.
-->It supports various data structures such as strings, hashes, lists, sets, and sorted sets.
-->Redis offers advanced features like transactions, pub/sub messaging, and Lua scripting.
-->It is known for its high performance, scalability, and flexibility.
-->Redis can be used for caching, session storage, real-time analytics, and more.
+## Memory Caching:</br>
+**Redis**</br>
+->Redis is an open-source, in-memory data structure store, used as a database, cache, and message broker.</br>
+->It supports various data structures such as strings, hashes, lists, sets, and sorted sets.</br>
+->Redis offers advanced features like transactions, pub/sub messaging, and Lua scripting.</br>
+->It is known for its high performance, scalability, and flexibility.</br>
+->Redis can be used for caching, session storage, real-time analytics, and more.</br>
 
-**Memcached**
-->Memcached is a high-performance, distributed memory object caching system designed to speed up dynamic web applications by alleviating database load.
-->It is simpler than Redis and primarily supports key-value storage.
-->Memcached is known for its simplicity, ease of deployment, and efficiency.
-->It is commonly used for caching database query results and page rendering.
-->Memcached does not support advanced data structures or persistence, unlike Redis.
+**Memcached**</br>
+->Memcached is a high-performance, distributed memory object caching system designed to speed up dynamic web applications by alleviating database load.</br>
+->It is simpler than Redis and primarily supports key-value storage.</br>
+->Memcached is known for its simplicity, ease of deployment, and efficiency.</br>
+->It is commonly used for caching database query results and page rendering.</br>
+->Memcached does not support advanced data structures or persistence, unlike Redis.</br>
 
-## Cache memory in computer organization:
-Cache memory is a small, high-speed storage area in a computer. The cache is a smaller and faster memory that stores copies of the data from frequently used main memory locations. There are various independent caches in a CPU, which store instructions and data.
-•	The most important use of cache memory is that it is used to reduce the average time to access data from the main memory.
-•	The concept of cache works because there exists locality of reference (the same items or nearby items are more likely to be accessed next) in processes.
-**Levels of Memory**
-•	Level 1 or Register: It is a type of memory in which data is stored and accepted that are immediately stored in the CPU. The most commonly used register is Accumulator, Program counter , Address Register, etc.
-•	Level 2 or Cache memory: It is the fastest memory that has faster access time where data is temporarily stored for faster access.
-•	Level 3 or Main Memory: It is the memory on which the computer works currently. It is small in size and once power is off data no longer stays in this memory.
-•	Level 4 or Secondary Memory: It is external memory that is not as fast as the main memory but data stays permanently in this memory.
+## Cache memory in computer organization:</br>
+Cache memory is a small, high-speed storage area in a computer. The cache is a smaller and faster memory that stores copies of the data from frequently used main memory locations. There are various independent caches in a CPU, which store instructions and data.</br>
+•	The most important use of cache memory is that it is used to reduce the average time to access data from the main memory.</br>
+•	The concept of cache works because there exists locality of reference (the same items or nearby items are more likely to be accessed next) in processes.</br>
+**Levels of Memory**</br>
+• **Level 1 or Register:**  It is a type of memory in which data is stored and accepted that are immediately stored in the CPU. The most commonly used register is Accumulator, Program counter , Address Register, etc.</br>
+•	**Level 2 or Cache memory:** It is the fastest memory that has faster access time where data is temporarily stored for faster access.</br>
+•	**Level 3 or Main Memory:** It is the memory on which the computer works currently. It is small in size and once power is off data no longer stays in this memory.</br>
+•	**Level 4 or Secondary Memory:** It is external memory that is not as fast as the main memory but data stays permanently in this memory.</br>
 
-## Cache replacement Strategis:
-Cache replacement strategies determine which cache line should be evicted when new data needs to be loaded into the cache. Here are some common cache replacement strategies:
-**1. Least Recently Used (LRU)**
-•	Concept: Evicts the cache line that has not been accessed for the longest time.
-•	Pros: Often effective because it leverages temporal locality.
-•	Cons: Requires maintaining a list of usage, which can be complex and resource-intensive.
-**2. First In First Out (FIFO)**
-•	Concept: Evicts the cache line that was loaded first.
-•	Pros: Simple to implement.
-•	Cons: Does not consider how frequently or recently data is accessed, which may result in suboptimal performance.
-**3. Least Frequently Used (LFU)**
-•	Concept: Evicts the cache line that has been accessed the least number of times.
-•	Pros: Effective when access frequency is a good indicator of future use.
-•	Cons: Requires tracking access counts, which can be resource-intensive.
-**4. Random Replacement**
-•	Concept: Evicts a randomly selected cache line.
-•	Pros: Simple to implement and avoids systematic performance degradation.
-•	Cons: May not always make the best eviction choice compared to other algorithms.
-**5. Most Recently Used (MRU)**
-•	Concept: Evicts the cache line that was most recently accessed.
-•	Pros: Can be effective in specific scenarios where recently accessed data is less likely to be reused.
-•	Cons: Generally not as effective as LRU in typical access patterns.
-**6. Adaptive Replacement Cache (ARC)**
-•	Concept: Balances between recency (LRU) and frequency (LFU) by dynamically adjusting the importance of each factor.
-•	Pros: Adapts to different access patterns, often providing superior performance.
-•	Cons: More complex to implement.
+## Cache replacement Strategis:</br>
+Cache replacement strategies determine which cache line should be evicted when new data needs to be loaded into the cache. Here are some common cache replacement strategies:</br>
+**1. Least Recently Used (LRU)** </br>
+•	Concept: Evicts the cache line that has not been accessed for the longest time.</br>
+•	Pros: Often effective because it leverages temporal locality.</br>
+•	Cons: Requires maintaining a list of usage, which can be complex and resource-intensive.</br>
+**2. First In First Out (FIFO)** </br>
+•	Concept: Evicts the cache line that was loaded first.</br>
+•	Pros: Simple to implement.</br>
+•	Cons: Does not consider how frequently or recently data is accessed, which may result in suboptimal performance.</br>
+**3. Least Frequently Used (LFU)** </br>
+•	Concept: Evicts the cache line that has been accessed the least number of times.</br>
+•	Pros: Effective when access frequency is a good indicator of future use.</br>
+•	Cons: Requires tracking access counts, which can be resource-intensive.</br>
+**4. Random Replacement**</br>
+•	Concept: Evicts a randomly selected cache line.</br>
+•	Pros: Simple to implement and avoids systematic performance degradation.</br>
+•	Cons: May not always make the best eviction choice compared to other algorithms.</br>
+**5. Most Recently Used (MRU)** </br>
+•	Concept: Evicts the cache line that was most recently accessed.</br>
+•	Pros: Can be effective in specific scenarios where recently accessed data is less likely to be reused.</br>
+•	Cons: Generally not as effective as LRU in typical access patterns.</br>
+**6. Adaptive Replacement Cache (ARC)** </br>
+•	Concept: Balances between recency (LRU) and frequency (LFU) by dynamically adjusting the importance of each factor.</br>
+•	Pros: Adapts to different access patterns, often providing superior performance.</br>
+•	Cons: More complex to implement.</br>
 
-## LRU Cache Using Doubly Linked List:
+## LRU Cache Using Doubly Linked List:</br>
 
-class LRUCache {
+```class LRUCache {
     CDLL ll;
     int capacity;
     int size;
@@ -156,13 +156,13 @@ class CDLL {
         head = nodeToMove;
     }
 }
+```
+## UML DIAGRAM</br>
+ ![Uml diagram showing LRU cache design](https://techbyexample.com/wp-content/uploads/2021/10/In-Memory-Cache.drawio-min.png)
 
-## UML DIAGRAM
- 
+## Explaination:</br>
 
-## Explaination:
-
-// Main class for the LRU Cache
+```// Main class for the LRU Cache
 class LRUCache {
     CDLL ll; // Doubly linked list to store the cache elements
     int capacity; // Maximum capacity of the cache
@@ -275,3 +275,4 @@ class CDLL {
         head = nodeToMove; // Update the head
     }
 }
+```
